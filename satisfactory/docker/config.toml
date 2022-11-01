@@ -1,0 +1,10 @@
+agent_name = "satisfactory"
+secret_path = "/config/playit-secret.txt"
+command = "/bin/bash"
+command_args = ["/start.sh"]
+
+[[tunnels]]
+name = "satisfactory"
+proto = "udp"
+port_count = 3
+
