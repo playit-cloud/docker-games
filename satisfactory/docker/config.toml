@@ -1,7 +1,7 @@
 agent_name = "satisfactory"
-secret_path = "/config/playit-secret.txt"
+secret_path = "/mnt/server/playit-secret.txt"
 command = "/bin/bash"
-command_args = ["/start.sh"]
+command_args = ["run.sh"]
 
 [[tunnels]]
 name = "satisfactory"
