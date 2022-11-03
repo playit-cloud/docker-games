@@ -1,0 +1,12 @@
+agent_name = "valheim"
+secret_path = "/mnt/server/playit-secret.txt"
+command = "/bin/bash"
+command_args = ["run.sh"]
+
+[[tunnels]]
+name = "valheim"
+tunnel_type = "valheim"
+proto = "udp"
+port_count = 1
+local = 2456
+

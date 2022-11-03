@@ -7,25 +7,28 @@ cat egg.json | jq -r ".scripts.installation.script" > install.sh && sed -i 's/\r
 chmod +x install.sh
 
 rm .env || true
+
 # static envars
 cat egg.json | \
   jq -r '.variables[] | "\(.user_editable) \(.env_variable)=\"\(.default_value)\""' | \
   grep '^false ' | \
-  awk '{ print $2 }' >> .env
+  cut -d" " -f2- >> .env
 
 # default envars
 cat egg.json | \
   jq -r '.variables[] | "\(.user_editable) \(.env_variable)=\"${\(.env_variable):-\(.default_value)}\""' | \
-  grep '^true ' \
-  | awk '{ print $2 }' >> .env
+  grep '^true ' | \
+  cut -d" " -f2- >> .env
 
 ##### INSTALL #####
 
 sudo chown -R server /mnt/server
 
 if [ ! -d "/mnt/server/steamcmd" ]; then
-  eval $(cat .env) ./install.sh
+  sudo -s eval $(cat .env) ./install.sh
 fi
+
+sudo chown -R server /mnt/server
 
 ##### SETUP COMMAND #####
 source .env
