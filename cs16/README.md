@@ -1,4 +1,4 @@
-# HLDS
+# Counter Strike 1.6
 
 ```bash
 docker run --rm -it \
