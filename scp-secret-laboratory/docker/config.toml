@@ -1,0 +1,10 @@
+agent_name = "scp secret lab"
+secret_path = "/mnt/server/playit-secret.txt"
+command = "/bin/bash"
+command_args = ["run.sh"]
+
+[[tunnels]]
+name = "SCP: Secret Laboratory"
+proto = "udp"
+port_count = 1
+
