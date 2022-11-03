@@ -22,7 +22,7 @@ playit.gg is a global proxy that allows you to host a server without port forwar
 ## Coming-Soon™
 - Minecraft Java
 - Minecraft Bedrock
-- Minecraft Bunjeecord
+- Minecraft BungeeCord
 - Rust
 
 Want More? Have Any Suugisons? [Join Our Discord](https://discord.gg/AXAbujx)
