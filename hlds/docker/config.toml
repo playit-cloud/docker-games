@@ -1,0 +1,10 @@
+agent_name = "hlds"
+secret_path = "/mnt/server/playit-secret.txt"
+command = "/bin/bash"
+command_args = ["run.sh"]
+
+[[tunnels]]
+name = "hlds"
+proto = "udp"
+port_count = 2
+
