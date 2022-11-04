@@ -16,7 +16,7 @@ RUN apt-get install -y \
 
 # add user "server" with sudo
 
-RUN apt-get install -y sudo
+RUN apt-get install -y sudo lib32gcc1
 
 RUN useradd server -s /bin/bash -G sudo \
     && mkdir /home/server \

@@ -25,7 +25,15 @@ cat egg.json | \
 sudo chown -R server /mnt/server
 
 if [ ! -d "/mnt/server/steamcmd" ]; then
-  sudo -s eval $(cat .env) ./install.sh
+  if [ -f "./install-pre.sh" ]; then
+    sudo -s eval $(cat .env) ./install-pre.sh
+  fi
+
+  if [ -f "./install-override.sh" ]; then
+    sudo -s eval $(cat .env) ./install-override.sh
+  else 
+    sudo -s eval $(cat .env) ./install.sh
+  fi
 fi
 
 sudo chown -R server /mnt/server

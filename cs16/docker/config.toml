@@ -1,0 +1,10 @@
+agent_name = "cs16"
+secret_path = "/mnt/server/playit-secret.txt"
+command = "/bin/bash"
+command_args = ["run.sh"]
+
+[[tunnels]]
+name = "cs16"
+proto = "udp"
+port_count = 2
+
