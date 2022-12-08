@@ -1,9 +1,0 @@
-agent_name = "minecraft-java"
-secret_path = "/mnt/server/playit-secret.txt"
-command = "/bin/bash"
-command_args = ["run.sh"]
-
-[[tunnels]]
-name = "minecraft-java"
-proto = "tcp"
-port_count = 3
